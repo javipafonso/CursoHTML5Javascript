@@ -1,0 +1,63 @@
+/*Tipo de letra para todo el cuerpo del html */
+body{
+    font-family: 'Courier New', Courier, monospace;
+}
+/* estilo de contenedor del formulario el contenedor se ajusta al contenido */
+.boxstyle{
+    background-color: white;
+    border: 2px solid #708090;
+    border-radius: 1em;    
+    display: flex;
+    flex-flow: column;
+    width: fit-content;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 5px 10px 11px 4px rgba(140,124,124,0.5); 
+    
+}
+/*Estilo para el h1 de la section */
+.boxstyle h1{
+    font-size: 1.7em;
+    font-weight: 900;
+}
+/*Le hemos dado este padding para que esté separado de los bordes del contenedor */
+.formstyle{
+    padding: 0 1.5em 0.5em;
+    display: flex;
+    flex-flow:column;
+}
+/*Asignamos características a la letra sólo a las labels del formulario que estén dentro de un span*/
+.inputs span {
+    font-size: 1em;
+    font-weight: 700;
+    padding: 0 1.2em 0 0em;        
+    width: 102px;
+}
+/*Hacemos esto para la separación entre los elementos del p que esten dentro de la clase .inputs y alineación */
+.inputs{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+/*Ajustamos el aspecto dentro de la clase y dentro de esta los inputs  */
+.inputs input{
+    border: 1px solid #ccc;
+    height: 32px;
+    width: 237px;
+}
+/* Características propias de la clase buttonsend*/
+.buttonsend{
+    display: flex;
+    justify-content: center;
+}
+/* Características propias del button */
+.buttonsend input[type=submit]{
+    background-color: #22222275;
+    color: white;
+    padding: 0.8em 0.8em 0.2em 0.8em;
+    font-weight: 700;
+    border-color: blanchedalmond;
+    width: 95px;
+    
+    
+}
