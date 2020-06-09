@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Caso práctico 5</title>	
+  <link rel="stylesheet" type="text/css" href="mystyle.css">
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+</head>
+<body>
+ <section class="boxstyle">
+  <h1>Formulario de Registro</h1>
+	<form method="post" action="prueba.php" class="formstyle">
+  <!-- En el input del nombre sólo se permite escribir letras con un tamaño máximo de 20 y mínimo 3 se valida por medio una expresión regular-->
+  <p class="inputs"><span><label for="nombre">Nombre:</label></span> <input  type="text" name="nombre" placeholder="Nombre" title="Deben ser solo letras"  maxlength="20" minlength="3"  pattern="[A-Za-zñÑáéíóúÁÉÍÓÚüÜ]+" required></p>    
+  <!-- En el input del fecha es de tipo text y se ha puesto una expresión regular que válide que tiene un determinado formato YYYY-MM-DD -->
+  <p class="inputs"><span><label for="fecha">Fecha de registro:</label></span><input type="text" placeholder="dd/mm/aaaa" maxlength="10" name="fechanacimiento" pattern="[0-9]{4}-(0[1-9]|1[012])-(0[1-9]|1[0-9]|2[0-9]|3[01])" title="La fecha debe ser en el siguiente formato YYYY-MM-DD" required/> </p>
+  <!-- En el input del email sólo se permite escribir correos electronicos usando el tipo email-->
+  <p class="inputs"><span><label for="correo">Email:</label></span><input  type="email" placeholder="Email" title="Debe escribir un email en formato correcto (eg. xxxx@xxx.es)" name="correo" maxlength="40"   required></p>
+  <p class="inputs"><span><label for="password">Password:</label></span><input type="password" placeholder="Password" name="password" maxlength="25"/></p>
+   <!-- Se ha puesto un type reset para borrar los campos del formulario-->
+   
+   <p class="buttonsend"> <input  type="submit" value="Enviar"></p>
+</form>
+</section>
+</body>
+</html>

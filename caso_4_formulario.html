@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Caso práctico 4</title>		
+</head>
+<body>
+ 
+	<form method="post" action="prueba.php">
+  <!-- En el input del nombre sólo se permite escribir letras con un tamaño máximo de 20 y mínimo 3 se valida por medio una expresión regular-->
+  <p><label for="nombre">Nombre:</label> <input type="text" name="nombre" placeholder="Introduzca su Nombre" title="Deben ser solo letras" size="25" maxlength="20" minlength="3"  pattern="[A-Za-zñÑáéíóúÁÉÍÓÚüÜ]+" required></p>
+  <!-- En el input del apellidos sólo se permite escribir letras con un tamaño máximo de 40 y mínimo 3, se valida con patrones regex en dos bloques puedes poner un apellido o dos separados por un espacio-->
+  <p><label for="apellidos">Apellidos:</label><input type="text" name="apellidos" size="40" title="Deben ser solo letras" placeholder="Introduzca sus Apellidos" maxlength="40" minlength="3" pattern="([A-Za-zñÑáéíóúÁÉÍÓÚüÜ]+)([\s]{0,1})([A-Za-zñÑáéíóúÁÉÍÓÚüÜ]+)" required></p>
+  <!-- En el input del DNI sólo se permite escribir números y tiene que tener una longitud de 8, no se permiten letras, se ha puesto por el minlength y maxlength-->
+  <p><label for="dni">DNI:</label><input type="text" name="dni" placeholder="Introduzca su DNI" size="15" maxlength="8" pattern="(\d{8})" title="Deben ser 8 números" required></p>
+  <!-- En el input del fecha es de tipo text y se ha puesto una expresión regular que válide que tiene un determinado formato YYYY-MM-DD -->
+  <p><label for="fecha">Fecha de nacimiento:</label><input type="text" placeholder="Introduzca las fecha" maxlength="10" name="fechanacimiento" pattern="[0-9]{4}-(0[1-9]|1[012])-(0[1-9]|1[0-9]|2[0-9]|3[01])" title="La fecha debe ser en el siguiente formato YYYY-MM-DD" required/> <!--<input type="date" name="fechanacimiento"  onfocus="(this.type='date')"  onblur="(this.type='text')" pattern="[0-9]{4}-(0[1-9]|1[012])-(0[1-9]|1[0-9]|2[0-9]|3[01])" required></input>-->
+  <!-- En el input del email sólo se permite escribir correos electronicos usando el tipo email-->
+  <p><label for="correo">Correo electrónico:</label><input type="email" placeholder="Escriba su email" title="Debe escribir un email en formato correcto (eg. xxxx@xxx.es)" name="correo" maxlength="40" size="40"  required></p>
+  <label for="textarea">Mensaje:</label>
+  <!-- En el text area, aquí no hay restricción sino 10 filas y 50 cols que es el tamño del textarea-->
+  <p><textarea name="texto" rows="10" cols="50" placeholder="Escriba su mensaje" required></textarea></p>
+  <!-- simplemente valida que el checkbox tiene el check a true-->
+  <p><input type="checkbox" id="cbox" required/><label for="cbox">Aviso legal y política de privacidad</label>
+  <p><span></span></p>
+   <p>
+   <!-- Se ha puesto un type reset para borrar los campos del formulario-->
+    <input type="submit" value="Enviar"><input type="reset">
+   </p>
+</form>
+</body>
+</html>
